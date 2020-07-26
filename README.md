@@ -6,6 +6,8 @@ Crear archivo `.env` y llenarlo con las variables de entorno como en el archivo 
 
 ```
   npm install
-  npm run dev #Corre el servidor en el puerto 3000
-
+  npm run dev 
+  # El servidor Corre en http://localhost:3000
 ```
+
+Para hacer una prueba puedes utilizar postman para hacer una GET request a http://localhost:3000/api/v1 y si tienes algun usuario registrado en la base de datos te deberia dar ese resultado :3
