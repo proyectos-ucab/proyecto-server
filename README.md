@@ -1,12 +1,12 @@
 ## Confiugracion e instalacion
 
-Crear archivo `.env` y llenarlo con las variables de entorno como en el archivo ejemplo `.env.sample` , por ahora solo contiene los datos de conexion de la base de datos
+Crear archivo `.env` y llenarlo con las variables de entorno como en el archivo ejemplo `.env.sample` , por ahora solo contiene los datos de conexion de la base de datos y tu JWT_SCRETE que es para el login
 
 ### Instalacion
 
 ```
   npm install
-  npm run dev 
+  npm run dev
   # El servidor Corre en http://localhost:3000
 ```
 

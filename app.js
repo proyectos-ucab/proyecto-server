@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 const api = require("./routes/api");
+const auth = require("./auth");
 
 const port = process.env.PORT || 3000;
 
@@ -23,6 +24,7 @@ app.get("/test-route", (req, res) =>
 );
 
 app.use("/api/v1", api);
+app.use("/api/auth", auth);
 
 app.listen(port, (err) => {
   if (err) throw err;
