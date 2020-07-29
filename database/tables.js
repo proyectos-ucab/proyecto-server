@@ -1,3 +1,4 @@
 const usuario = "usuario";
+const carrera = "carrera";
 
-module.exports = { usuario };
+module.exports = { usuario, carrera };

@@ -7,13 +7,13 @@ const errorMessages = require("../utils/errorMessages");
 const tables = require("../database/tables");
 
 router.post("/login", async (req, res) => {
-  const { cedula, password } = req.body.payload;
+  const { correo, password } = req.body.payload;
 
   try {
     let usuario = await db
       .select("password")
       .from(tables.usuario)
-      .where({ cedula });
+      .where({ correo });
 
     if (!usuario[0]) {
       return res.status(404).json({
@@ -28,7 +28,7 @@ router.post("/login", async (req, res) => {
         .status(400)
         .json({ ok: false, data: "Contraseña o cedula no es correcta" });
     } else {
-      const token = await createJWT({ cedula });
+      const token = await createJWT({ cedula: usuario[0].cedula });
       return res.status(200).json({ token });
     }
   } catch (error) {
