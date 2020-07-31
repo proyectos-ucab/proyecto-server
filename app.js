@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 const logger = require("morgan");
 
 const api = require("./routes/api");
@@ -11,6 +12,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use(cookieParser());
 
 app.use(
@@ -24,7 +26,7 @@ app.get("/test-route", (req, res) =>
 );
 
 app.use("/api/v1", api);
-app.use("/api/auth", auth);
+app.use("/api/v1/auth", auth);
 
 app.listen(port, (err) => {
   if (err) throw err;
