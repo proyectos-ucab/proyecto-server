@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js --watch ."
+    "dev": "nodemon ./src/app.js --watch src",
+    "start": "node ./src/app.js"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "keywords": [],
   "author": "",
@@ -13,12 +17,14 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.2",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "pg": "^8.3.0",
     "uuid": "^8.2.0",
     "yup": "^0.29.1"
   },
