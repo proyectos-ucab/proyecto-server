@@ -8,9 +8,6 @@
     "dev": "nodemon ./src/app.js --watch src",
     "start": "node ./src/app.js"
   },
-  "engines": {
-    "node": "12.x"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
