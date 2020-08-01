@@ -7,7 +7,7 @@ const logger = require("morgan");
 const api = require("./routes/api");
 const auth = require("./auth");
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 9000;
 
 const app = express();
 
