@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/app.js --watch src"
+    "dev": "nodemon ./src/app.js --watch src",
+    "start": "node ./src/app.js"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "keywords": [],
   "author": "",
