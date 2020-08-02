@@ -15,7 +15,7 @@ router.post("/login", async (req, res) => {
     if (!usuario[0]) {
       return res.status(404).json({
         ok: false,
-        data: "Contraseña o Correo Ucab inválido.",
+        error: "Contraseña o Correo Ucab inválido.",
       });
     }
 
@@ -23,12 +23,12 @@ router.post("/login", async (req, res) => {
     if (!match) {
       res
         .status(400)
-        .json({ ok: false, data: "Contraseña o Correo Ucab inválido." });
+        .json({ ok: false, error: "Contraseña o Correo Ucab inválido." });
     } else {
       const token = await createJWT({ cedula: usuario[0].cedula });
       return res
         .status(200)
-        .json({ token, correo: usuario[0].correo, nombre: usuario[0].nombre });
+        .json({ ok:true, token, correo: usuario[0].correo, nombre: usuario[0].nombre });
     }
   } catch (error) {
     console.log(error);
